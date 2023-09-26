@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { NavLink } from 'react-router-dom';
 
 function App() {
+  const style = { paddingLeft: '.5rem' };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>React Router</h1>
+      <nav style={{ borderBottom: 'solid 1px', paddingBottom: '1rem', }}>
+        <NavLink to="/home" style={style}>Home</NavLink>
+        <NavLink to="/products" style={style}>Products</NavLink>
+        <NavLink to="/about" style={style}>About</NavLink>
+      </nav>
     </div>
   );
 }
