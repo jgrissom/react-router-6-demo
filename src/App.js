@@ -30,7 +30,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="home" element={<Home />} />
         <Route path="products" element={<Products products={products} />} />
-        <Route path="product/:id" element={<Product />} />
+        <Route path="product/:id" element={<Product products={products} />} />
         <Route path="about" element={<About />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
