@@ -1,6 +1,7 @@
 import { Routes, Route, NavLink } from 'react-router-dom';
 import Home from "./components/Home";
 import Products from "./components/Products";
+import Product from "./components/Product";
 import About from "./components/About";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="home" element={<Home />} />
         <Route path="products" element={<Products products={products} />} />
+        <Route path="product/:id" element={<Product />} />
         <Route path="about" element={<About />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
