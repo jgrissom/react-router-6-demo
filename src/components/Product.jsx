@@ -12,11 +12,18 @@ function Product(props) {
       <p>
       Quisque ut libero at eros suscipit pharetra sed at nisi. Vestibulum ac euismod nisl. Quisque purus tellus, condimentum quis ullamcorper at, scelerisque et sem. Duis fringilla eros vel orci iaculis pulvinar. Pellentesque sit amet dolor arcu. Etiam in tincidunt felis. Proin orci est, elementum et magna interdum, tempor luctus est. Quisque a vehicula lorem. Aenean dignissim magna sit amet arcu mattis imperdiet. Etiam consequat felis vitae eros bibendum laoreet.
       </p>
-      <div>
-        <strong>Name</strong>: {product.name}<br />
-        <strong>Price</strong>: {product.price}<br />
-        <p><Link to="/products">Back to Products Page</Link></p>
-      </div>
+      { 
+        product ? 
+          <div>
+            <strong>Name:</strong> { product.name }<br />
+            <strong>Price:</strong> { product.price }<br />
+          </div>
+        :
+          <div>
+            The product requested has <strong>NO MATCH</strong>
+          </div>
+      }
+      <p><Link to="/products">Back to Products Page</Link></p>
     </div>
   );
 }
