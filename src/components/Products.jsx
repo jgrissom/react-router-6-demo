@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Products(props) {
   const { products } = props;
   return (
@@ -9,7 +11,7 @@ function Products(props) {
       <ul>
         { products.map(p => 
           <li key={p.id}>
-            { p.name }
+            <Link to={`/product/${p.id}`}>{p.name}</Link>
           </li>
         )}
       </ul>
