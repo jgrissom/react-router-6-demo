@@ -10,7 +10,7 @@ function App() {
   });
   return (
     <div>
-      <h1>React Router</h1>
+      <h1>Super Cool Products for Sale!</h1>
       <nav style={{ 
         borderBottom: 'solid 1px', 
         paddingBottom: '1rem',
@@ -27,6 +27,9 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
+      <h5 style={{ borderTop: 'solid 1px', paddingTop: '1rem' }}>
+        &copy; 2023 Super Cool Products, LLC
+      </h5>
     </div>
   );
 }
